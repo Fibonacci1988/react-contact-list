@@ -3,7 +3,7 @@ import { Table, Space, Button, Divider } from "antd";
 import Context from "./Context";
 
 const ContactList = ({ onAddNewClick }) => {
-  const { contacts } = React.useContext(Context);
+  const {contacts} = React.useContext(Context);
 
   const columns = [
     {
@@ -16,8 +16,27 @@ const ContactList = ({ onAddNewClick }) => {
       dataIndex: "phone",
       key: "phone",
     },
+    {
+      title: "Birthday",
+      dataIndex: "birthday",
+      key: "birthday",
+    },
+    {
+      title: "Gender",
+      dataIndex: "gender",
+      key: "gender",
+    },
+    {
+      title: "Relative",
+      dataIndex: "isRelative",
+      key: "isRelative",
+    },
+    {
+      title: "Emergency Contact",
+      dataIndex: "isEmergency",
+      key: "isEmergency",
+    },
   ];
-
   return (
     <>
       <Space>
